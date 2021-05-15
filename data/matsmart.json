@@ -1,0 +1,167 @@
+[
+    {
+        "name": "V\u00e4xtbaserad Proteindryck Choklad",
+        "price": 39,
+        "mult": 3
+    },
+    {
+        "name": "ProPud Milkshake Melon & Honung 8-pack",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "V\u00e4xtbaserad Proteindryck Vanilla",
+        "price": 59,
+        "mult": 3
+    },
+    {
+        "name": "Protein milkshake Vanilj 8x500ml",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbar Oats & Blueberries 10-pack",
+        "price": 129,
+        "mult": 1
+    },
+    {
+        "name": "Protein & Oats Raspberries 10-pack",
+        "price": 129,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbar Hazelnut Caramel 12-pack",
+        "price": 149,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbar Chocolate & Red Fruit",
+        "price": 30,
+        "mult": 4
+    },
+    {
+        "name": "Proteinbar White Chocolate Lemon Pie 15-pack",
+        "price": 129,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Fudge 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Toffee 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteindryck Choklad 16-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteindryck Jordgubb 16-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteindryck Cookie & Cream 16-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Sportdryckpulver Hallon",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "Sportdryckpulver Tropical",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "Sportdryckpulver Choklad",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "Sportdryckpulver Jordgubb",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "Eko Hampaprotein",
+        "price": 129,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Choklad 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Cocos 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars M\u00f6rk Choklad 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Gainomax Bar Caramel Tripplenut 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbar Cookies & Cream 12-pack",
+        "price": 149,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Creamy Hazelnut 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Hallon & Vit Choklad 12-pack",
+        "price": 149,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Banana Split 12-pack",
+        "price": 149,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Caramel brownie 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinmilkshake Jordgubb & Choklad 8-pack",
+        "price": 99,
+        "mult": 1
+    },
+    {
+        "name": "Proteinbars Crunchy Caramel 15-pack",
+        "price": 199,
+        "mult": 1
+    },
+    {
+        "name": "Proteinshake BCAA Mintkaramell 8-pack",
+        "price": 79,
+        "mult": 1
+    },
+    {
+        "name": "Proteinv\u00e5ffla Vanilj",
+        "price": 60,
+        "mult": 6
+    },
+    {
+        "name": "Proteinbars Chokladboll 15-pack",
+        "price": 199,
+        "mult": 1
+    }
+]
