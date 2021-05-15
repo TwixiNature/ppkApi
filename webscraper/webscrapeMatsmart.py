@@ -1,18 +1,6 @@
-import requests
-import pprint as pp
-import csv
-
 import pathlib
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
-from selenium.webdriver.support.ui import WebDriverWait
-import pandas as pd
-import os
-from selenium.webdriver.chrome.options import Options
-from selenium.common.exceptions import NoSuchElementException
-from selenium.webdriver.common.by import By
-import time
 
 url1 = 'https://www.matsmart.se/proteinprodukter'
 xpathPrice = "//div[@class='product-item-price']//span[@class='product-price-title']"
@@ -22,8 +10,6 @@ xpathMultiPrice = "//div[@class='product-item-price']//span[@class='product-item
 xpathShort = "//div[@class='product-item-price']//div[@property='offers']"
 
 
-# getProducts() RETURNS A LIST OF matsmartItem WHICH ARE ALL PROTEINS
-
 class matsmartItem:
     def __init__(self, name, price, mult=1):
         self.name = name
@@ -32,12 +18,23 @@ class matsmartItem:
 
 
 def __CHROMEDRIVER_PATH():
+    """Calculates the path to Chromedriver.exe. Chromedriver.exe is expected
+    to be found as file in the same folder as this file.
+
+    Returns:
+        [type]: [description]
+    """
     filepath = pathlib.Path(__file__).parent.absolute()
     CHROMEDRIVER_PATH = str(filepath) + '/chromedriver.exe'
     return CHROMEDRIVER_PATH
 
 
 def __initWebDriver():
+    """Returns a configures webdriver
+
+    Returns:
+        [type]: [description]
+    """
     driver = webdriver.Chrome(
         executable_path=__CHROMEDRIVER_PATH())
     return driver
@@ -52,27 +49,24 @@ def numberOfItems():
     return numberOfItems
 
 
-def allPrices():
-
-    # Want to get:
-    # * Name of product
-    # * Price of product
-    # * Eventual "3 för"
-
-    pass
-
-
 def getProducts():
+    """Returns a list containing all protein-products on matsmart site.
+
+
+    Returns:
+        [matsmartItem]: List of matsmartItem.
+    """
     driver1 = __initWebDriver()
     driver1.get(url1)
+
     elementsPrice = driver1.find_elements_by_xpath(xpathPrice)
     elementsName = driver1.find_elements_by_xpath(xpathName)
-
     elementsMulti = driver1.find_elements_by_xpath(xpathMultiPrice)
-    reversedMulti = reversed(elementsMulti)
 
+    reversedMulti = reversed(elementsMulti)
     multiIndexes = getIndexesOfMultiDeal()
-    multiValues = getMultiPriceCool()
+    multiValues = getValuesOfMultiDeal()
+    multiValues.reverse()
 
     numberOfItems = 0
 
@@ -99,9 +93,7 @@ def getProducts():
     return listOfItems
 
 
-def getNumberOfMultis():
-    # getProducts()
-
+def getNumberOfMultiDeals():
     driver1 = __initWebDriver()
     driver1.get(url1)
     elementsPrice = driver1.find_elements_by_xpath(xpathMultiPrice)
@@ -109,14 +101,13 @@ def getNumberOfMultis():
     print(len(elementsPrice))
     driver1.close()
 
-    # Get multis into list
-    # Reverse list
-    # Count number of children for item
-    # If count is 3 instead of 2, pop from list and put into the thing
 
-
-# getProducts()
 def getIndexesOfMultiDeal():
+    """Returns a list containing the indexes of the multideals
+
+    Returns:
+        [list]: [description]
+    """
     driver1 = __initWebDriver()
     driver1.get(url1)
     elements = driver1.find_elements_by_xpath(xpathShort)
@@ -130,14 +121,19 @@ def getIndexesOfMultiDeal():
     return listOfIndexes
 
 
-def getMultiPriceCool():
+def getValuesOfMultiDeal():
+    """Returns a list containing the number of items
+    needed for price to be accurate in a multideal
+
+    Returns:
+        List: List of int's
+    """
     driver1 = __initWebDriver()
     driver1.get(url1)
     elementsMulti = driver1.find_elements_by_xpath(xpathMultiPrice)
-    reversedList = []
+    valueList = []
     for i in elementsMulti:
-        reversedList.append(int(i.text[0]))
+        valueList.append(int(i.text[0]))
 
     driver1.close()
-    reversedList.reverse()
-    return reversedList
+    return valueList
