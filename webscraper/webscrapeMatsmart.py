@@ -30,7 +30,7 @@ def __CHROMEDRIVER_PATH():
 
 
 def __initWebDriver():
-    """Returns a configures webdriver
+    """Returns a configured webdriver
 
     Returns:
         [type]: [description]
